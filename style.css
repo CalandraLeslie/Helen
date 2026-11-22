@@ -82,8 +82,8 @@ a:hover { text-decoration-thickness: 4px; }
 .brand-text { display: grid; }
 .brand small { font-size: 0.8rem; color: var(--muted); }
 .brand .logo { width: auto; height: 3.75rem; flex: none; background: transparent; }
-:root[data-comfort="night"] .brand .logo { background: #E9EFF5; border-radius: 0.5rem; padding: 0.15rem 0.4rem; }
-@media (prefers-color-scheme: dark) { :root:not([data-comfort]) .brand .logo { background: #E9EFF5; border-radius: 0.5rem; padding: 0.15rem 0.4rem; } }
+:root[data-comfort="night"] .brand .logo { filter: drop-shadow(0 0 1px #E9EFF5) drop-shadow(0 0 3px rgba(233,239,245,.55)); }
+@media (prefers-color-scheme: dark) { :root:not([data-comfort]) .brand .logo { filter: drop-shadow(0 0 1px #E9EFF5) drop-shadow(0 0 3px rgba(233,239,245,.55)); } }
 .brand:hover strong { text-decoration: underline; text-decoration-thickness: 3px; }
 .btn.menu-btn { display: inline-flex; }
 .bar > nav { flex-basis: 100%; order: 4; }
