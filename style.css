@@ -77,9 +77,13 @@ a:hover { text-decoration-thickness: 4px; }
 /* Header and menu */
 .site-head { background: var(--bg); border-bottom: 2px solid var(--rule); margin-inline: calc(-1 * clamp(1rem, 4vw, 2rem)); padding-inline: clamp(1rem, 4vw, 2rem); z-index: 20; }
 .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 1rem; padding-block: 0.6rem; }
-.brand { display: grid; line-height: 1.25; text-decoration: none; color: var(--fg); padding-block: 0.4rem; margin-inline-end: auto; }
+.brand { display: flex; align-items: center; gap: 0.75rem; line-height: 1.25; text-decoration: none; color: var(--fg); padding-block: 0.4rem; margin-inline-end: auto; }
 .brand strong { font-size: 1.2rem; }
-.brand span { font-size: 0.8rem; color: var(--muted); }
+.brand-text { display: grid; }
+.brand small { font-size: 0.8rem; color: var(--muted); }
+.brand .logo { width: auto; height: 3.75rem; flex: none; background: transparent; }
+:root[data-comfort="night"] .brand .logo { background: #E9EFF5; border-radius: 0.5rem; padding: 0.15rem 0.4rem; }
+@media (prefers-color-scheme: dark) { :root:not([data-comfort]) .brand .logo { background: #E9EFF5; border-radius: 0.5rem; padding: 0.15rem 0.4rem; } }
 .brand:hover strong { text-decoration: underline; text-decoration-thickness: 3px; }
 .btn.menu-btn { display: inline-flex; }
 .bar > nav { flex-basis: 100%; order: 4; }
